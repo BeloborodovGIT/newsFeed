@@ -1,0 +1,14 @@
+{% if pag_by == 10 %}
+<a href="{% url 'home' 20 %}">20</a>
+<a href="{% url 'home' 50 %}">50</a>
+{% elif pag_by == 50 %}
+<a href="{% url 'home' 10 %}">10</a>
+<a href="{% url 'home' 20 %}">20</a>
+{% elif pag_by == 20 %}
+<a href="{% url 'home' 10 %}">10</a>
+<a href="{% url 'home' 50 %}">50</a>
+{% else %}
+<a href="{% url 'home' 10 %}">10</a>
+<a href="{% url 'home' 20 %}">20</a>
+<a href="{% url 'home' 50 %}">50</a>
+{% endif %}
