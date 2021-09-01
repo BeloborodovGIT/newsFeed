@@ -25,11 +25,11 @@ class UserRegisterForm(UserCreationForm):
 class NewsForm(forms.ModelForm):
     class Meta:
         model = News
-        fields = ['title', 'content']
+        fields = ['title', 'content', 'photo']
+        #photo = forms.FileField()
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control', 'rows': 5}),
-            # 'photo': forms.(attrs={'class': 'form-control'}),
         }
 
     def clean_title(self):
