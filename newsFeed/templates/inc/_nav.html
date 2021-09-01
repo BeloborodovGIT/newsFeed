@@ -3,13 +3,13 @@
         <a class="btn btn-outline-success" href="{%url 'home'%}">News Feed</a>
         {% if request.user.is_authenticated %}
         <form class="d-flex">
-            <a class="btn btn-sm btn-outline-secondary me-2" type="button" href="{% url 'add_news' %}">Добавить новость</a>
-            <a class="btn btn-sm btn-outline-secondary" type="button" href="{% url 'user_logout' %}">Выйти</a>
+            <a class="btn btn-sm btn-outline-secondary me-2" type="button" href="{% url 'add_news' %}">Add news</a>
+            <a class="btn btn-sm btn-outline-secondary" type="button" href="{% url 'user_logout' %}">Sign out</a>
         </form>
         {% else %}
         <form class="d-flex">
-            <a class="btn btn-sm btn-outline-secondary me-2" type="button" href="{% url 'user_login' %}">Войти</a>
-            <a class="btn btn-sm btn-outline-secondary" type="button" href="{% url 'register' %}">Зарегестрироваться</a>
+            <a class="btn btn-sm btn-outline-secondary me-2" type="button" href="{% url 'user_login' %}">Sign in</a>
+            <a class="btn btn-sm btn-outline-secondary" type="button" href="{% url 'register' %}">Sign up</a>
         </form>
         {% endif %}
     </div>
