@@ -13,13 +13,15 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#^rii%z+g#bgi^@tb_7b^w(sifjim8@vi*4%gtvj(uii5l84m$'
+SECRET_KEY = "django-insecure-#^rii%z+g#bgi^@tb_7b^w(sifjim8@vi*4%gtvj(uii5l84m$"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'news.apps.NewsConfig',
+    'psycopg2',
 ]
 
 MIDDLEWARE = [

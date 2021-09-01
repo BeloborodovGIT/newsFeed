@@ -95,8 +95,8 @@ class CreateNews(LoginRequiredMixin, CreateView):
     form_class = NewsForm
     template_name = 'news/add_news.html'
     login_url = '/admin/'
-    # raise_exception = True
-    # success_url = reverse_lazy('home')
+    raise_exception = True
+    success_url = reverse_lazy('home')
 
 # def HomeNews(request, )
 
@@ -124,7 +124,7 @@ class CreateNews(LoginRequiredMixin, CreateView):
 
 # def add_news(request):
 #     if request.method == 'POST':
-#         form = NewsForm(request.POST)
+#         form = NewsForm(request.POST, request.FILES)
 #         if form.is_valid():
 #             news = News.objects.create(**form.cleaned_data)
 #             news = form.save()
