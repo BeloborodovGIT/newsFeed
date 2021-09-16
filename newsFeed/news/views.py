@@ -38,7 +38,7 @@ def register(request):
             user = form.save()
             login(request, user)
             messages.success(request, 'Вы успешно зарегестрированы')
-            return redirect('login')
+            return redirect('user_login')
         else:
             messages.error(request, 'Ошибка регистрации')
     else:
